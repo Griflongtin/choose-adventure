@@ -1,0 +1,31 @@
+.map-container {
+  background-image: url('../../assets/img/map-green.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  margin: 20px 20px;
+  padding: 20px 20px;
+  width: 100vw;
+  height: 75vh;
+}
+
+#place-button-one {
+  top: 50%;
+  left: 50%;
+}
+
+#place-button-two {
+  top: 50%;
+  left: 50%;
+}
+
+#place-button-three {
+  top: 50%;
+  left: 50%;
+}
+
+#place-button-four {
+  top: 50%;
+  left: 50%;
+}
