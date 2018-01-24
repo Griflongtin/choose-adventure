@@ -1,60 +1,67 @@
 <div class="home-container">
   <h2>Island Life: Tale of Treachery and </h2>
   <p>Our game is here to confuse you. </p>
-  <div class="points-setup">
-    <h2>Points <span class="points-left"> </span></h2>
-    <div class="perk-row strength">
-      <h3 name="strength">Strength</h3>
-      <h5 class="strength-number"> </h5>
-      <div class="button-container">
-        <button type="button" name="button"> Add + </button>
-        <button type="button" name="button"> Subtract - </button>
+  <form class="form-name-input">
+    <label for="user-player-name">Enter Player Name: </label>
+    <input type="text" name="user-player-name" #playerName>
+    <div class="points-setup">
+      <h2>Points <span class="points-left"> </span></h2>
+      <div class="perk-row strength">
+        <h3 name="strength">Strength</h3>
+        <h5 class="strength-number" value="5" #newPlayerStrength> </h5>
+        <div class="button-container">
+          <button type="button" name="button"> Add + </button>
+          <button type="button" name="button"> Subtract - </button>
+        </div>
+      </div>
+      <div class="perk-row intelligence">
+        <h3 name="intelligence">intelligence</h3>
+        <h5 class="intelligence-number" value="5" #newPlayerIntelligence> </h5>
+        <div class="button-container">
+          <button type="button" name="button"> Add + </button>
+          <button type="button" name="button"> Subtract - </button>
+        </div>
+      </div>
+      <div class="perk-row agility">
+        <h3 name="agility">agility</h3>
+        <h5 class="agility-number" value="1" #newPlayerAgility> </h5>
+        <div class="button-container">
+          <button type="button" name="button"> Add + </button>
+          <button type="button" name="button"> Subtract - </button>
+        </div>
+      </div>
+      <div class="perk-row luck">
+        <h3 name="luck">luck</h3>
+        <h5 class="luck-number" value="2" #newPlayerLuck> </h5>
+        <div class="button-container">
+          <button type="button" name="button"> Add + </button>
+          <button type="button" name="button"> Subtract - </button>
+        </div>
+      </div>
+      <div class="perk-row endurance">
+        <h3 name="endurance">endurance</h3>
+        <h5 class="endurance-number" value="4" #newPlayerEndurance> </h5>
+        <div class="button-container">
+          <button type="button" name="button"> Add + </button>
+          <button type="button" name="button"> Subtract - </button>
+        </div>
+      </div>
+      <div class="perk-row perception">
+        <h3 name="perception">perception</h3>
+        <h5 class="perception-number" value="4" #newPlayerPerception> </h5>
+        <div class="button-container">
+          <button type="button" name="button"> Add + </button>
+          <button type="button" name="button"> Subtract - </button>
+        </div>
       </div>
     </div>
-    <div class="perk-row intelligence">
-      <h3 name="intelligence">intelligence</h3>
-      <h5 class="intelligence-number"> </h5>
-      <div class="button-container">
-        <button type="button" name="button"> Add + </button>
-        <button type="button" name="button"> Subtract - </button>
-      </div>
-    </div>
-    <div class="perk-row agility">
-      <h3 name="agility">agility</h3>
-      <h5 class="agility-number"> </h5>
-      <div class="button-container">
-        <button type="button" name="button"> Add + </button>
-        <button type="button" name="button"> Subtract - </button>
-      </div>
-    </div>
-    <div class="perk-row luck">
-      <h3 name="luck">luck</h3>
-      <h5 class="luck-number"> </h5>
-      <div class="button-container">
-        <button type="button" name="button"> Add + </button>
-        <button type="button" name="button"> Subtract - </button>
-      </div>
-    </div>
-    <div class="perk-row endurance">
-      <h3 name="endurance">endurance</h3>
-      <h5 class="endurance-number"> </h5>
-      <div class="button-container">
-        <button type="button" name="button"> Add + </button>
-        <button type="button" name="button"> Subtract - </button>
-      </div>
-    </div>
-    <div class="perk-row perception">
-      <h3 name="perception">perception</h3>
-      <h5 class="perception-number"> </h5>
-      <div class="button-container">
-        <button type="button" name="button"> Add + </button>
-        <button type="button" name="button"> Subtract - </button>
-      </div>
-    </div>
-    <button type="button" name="button"><a routerLink="/map">Start Play</a></button>
-  </div>
+    <button type="submit" name="button" (click)="createUserName(newPlayerName.value, newPlayerStrength.value, newPlayerIntelligence.value, newPlayerAgility.value, newPlayerPerception.value, newPlayerLuck.value, newPlayerEndurance.value); newPlayerName.value=''; newPlayerStrength.value=''; newPlayerIntelligence.value=''; newPlayerAgility.value=''; newPlayerPerception.value=''; newPlayerLuck.value=''; newPlayerEndurance.value='';" routerLink="/map">Start Game</button>
+  </form>
 </div>
 <button type="button" (click)="UsersIt()" name="button">LogMe</button>
 <div class="existing-users" *ngFor="let user of Users | async">
   <li>{{user.name}}</li>
 </div>
+
+
+"submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''"

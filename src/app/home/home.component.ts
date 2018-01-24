@@ -13,9 +13,14 @@ import { UserService } from '../user.service';
 export class HomeComponent implements OnInit {
 
   Users = [];
-
+  newPlayerName;
   constructor(private router: Router, private userService: UserService) { }
-
+  createUserName(newPlayerName) {
+    this.newPlayerName = newPlayerName;
+    this.User = User[];
+    console.log(this.newPlayerName);
+    // document.getElementsByClassName(form-)
+  }
   ngOnInit() {
     this.Users = this.userService.getUsers();
   }
