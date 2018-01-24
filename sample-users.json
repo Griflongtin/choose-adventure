@@ -1,0 +1,12 @@
+{ "users": [{
+    "name": "Griffin",
+    "place": "map",
+    "perks": [2,3,5,6,2,3],
+    "inventory": ["crowbar", "bag", "mushroom", "grenade", "drugs"]
+  }, {
+    "name": "Toad",
+    "place": "wasteland",
+    "perks": [2,3,5,6,2,3],
+    "inventory": ["crowbar", "bag", "mushroom", "grenade", "drugs", "pizza", "wrench", "flamethrower"]
+  }]
+}
