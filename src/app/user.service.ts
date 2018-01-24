@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from './user.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 @Injectable()
 export class UserService {
@@ -9,5 +10,18 @@ export class UserService {
     getUsers(){
       return this.users;
     }
+
+    addUser(newPlayerName, place, newUserPerks, inventory) {
+      this.users.push({name: newPlayerName, place: place, perks: newUserPerks, inventory: inventory});
+    }
+
+    pushNewUsersData(newPlayerName, newplace, UserPerks, inventory){
+      const userEntryInFirebace = this.users;
+      userEntryInFirebace.update({name: newPlayerName, place: newplace, perks: UserPerks, inventory: inventory});
+    }
+
+    getUserById(userId: string){
+    return this.database.object('users/' + userId);
+  }
 
 }

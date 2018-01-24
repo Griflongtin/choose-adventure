@@ -12,6 +12,7 @@ import { MapComponent } from './map/map.component';
 import { PlaceComponent } from './place/place.component';
 import { UserService } from './user.service';
 import { masterFirebaseConfig } from './api-keys';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     AppComponent,
     HomeComponent,
     MapComponent,
-    PlaceComponent
+    PlaceComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
