@@ -54,6 +54,7 @@
     <button type="button" name="button"><a routerLink="/map">Start Play</a></button>
   </div>
 </div>
-<div class="existing-users" *ngFor="let user of users | async">
-  <li>{{user}}</li>
+<button type="button" (click)="UsersIt()" name="button">LogMe</button>
+<div class="existing-users" *ngFor="let user of Users | async">
+  <li>{{user.name}}</li>
 </div>

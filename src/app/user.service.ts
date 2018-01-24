@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
-import { User } from './user.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 @Injectable()
 export class UserService {
-  users: FirebaseListObservable<any[]>;
+  users;
   constructor(private database: AngularFireDatabase) {
     this.users = database.list('users');
   }
-  getAlbums(){
-    console.log(this.users)
-    return this.users;
-  }
+    getUsers(){
+      return this.users;
+    }
 
 }
