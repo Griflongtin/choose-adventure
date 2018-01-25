@@ -60,10 +60,9 @@
 </div>
 <button type="button" (click)="UsersIt()" name="button">LogMe</button>
 <div class="existing-users" *ngFor="let user of Users | async">
-  <li>{{user.name}}</li>
-  <li>{{user.strength}}</li>
+  <li (click)='goToCharacterProgress(user)'>{{user.name}}</li>
 </div>
 
 <div>
   <h3>{{(userToDisplay | async)?.name}}</h3>
-</div>  
+</div>

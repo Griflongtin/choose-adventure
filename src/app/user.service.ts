@@ -20,7 +20,7 @@ export class UserService {
       userEntryInFirebace.update({name: newPlayerName, place: newplace, perks: UserPerks, inventory: inventory});
     }
 
-    getUserById(userId: string){
+    getUserById(userId: number){
     return this.database.object('users/' + userId);
   }
 

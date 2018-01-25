@@ -8,11 +8,12 @@ import { UserService } from '../user.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [UserService]
+  providers: [ UserService]
 })
 export class HomeComponent implements OnInit {
-  userId: string;
+  userId: number;
   Users = [];
+  userToDisplay;
   newPlayerName;
   constructor(private router: Router, private userService: UserService) { }
   createUserName(newPlayerName) {
@@ -24,13 +25,23 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
     this.Users = this.userService.getUsers();
+
+    this.router.params.forEach((urlParameters) => {
+      this.userId = parseInt(urlParameters['id']);
+    });
+    this.userToDisplay = this.userService.getUserById(this.userId);
+
+
+
+
+
     // this.userId = urlParameters['id'];
     // this.userToDisplay = this.UserServicel.getUserById(this.userId);
   }
 
-  // goToCharacterProgress(clickedUser: Users) {
-  //   this.router.navigate(['users', clickedUser.$key]);
-  // };
+  goToCharacterProgress(clickedUser) {
+    this.router.navigate(['map', clickedUser.$key]);
+  };
 
 
 }
