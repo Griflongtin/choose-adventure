@@ -3,6 +3,7 @@ import { User } from './user.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 @Injectable()
 export class UserService {
+  currentUser;
   users;
   constructor(private database: AngularFireDatabase) {
     this.users = database.list('users');
@@ -21,7 +22,12 @@ export class UserService {
     }
 
     getUserById(userId: number){
-    return this.database.object('users/' + userId);
-  }
+      this.currentUser = userId;
+      return this.database.object('users/' + userId);
+    }
+
+    findUser(){
+      return this.database.object('users/' + this.currentUser);
+    }
 
 }
