@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [ UserService]
+  providers: [UserService]
 })
 export class HomeComponent implements OnInit {
   userId: number;
@@ -26,18 +26,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.Users = this.userService.getUsers();
 
-    this.router.Params.forEach((urlParameters) => {
-      this.userId = parseInt(urlParameters['id']);
-    });
-    this.userToDisplay = this.userService.getUserById(this.userId);
-
   }
 
   goToCharacterProgress(clickedUser) {
-
-    alert('hell');
-    this.router.navigate(['map', clickedUser.$key]);
-    // this.userToDisplay = this.userService.getUserById(clickedUser.$key);
+    this.router.navigate(['map/', clickedUser.$key]);
   };
 
 

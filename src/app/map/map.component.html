@@ -8,18 +8,18 @@
 
 
 
-<!-- <ul>
-  <li>{{(userToDisplay | async)?.name}}</li>
-  <li>{{(userToDisplay | async)?.$key}}</li>
+<ul>
+  <li>{{(currentUser | async)?.name}}</li>
+  <li>{{(currentUser | async)?.$key}}</li>
   <ul>
     <li>PERKS</li>
-    <li> Strength: {{(userToDisplay | async)?.perks.strength}}</li>
-    <li> Intelligence: {{(userToDisplay | async)?.perks.intelligence}}</li>
-    <li> Agility: {{(userToDisplay | async)?.perks.agility}}</li>
-    <li> Luck: {{(userToDisplay | async)?.perks.luck}}</li>
-    <li> Endurance: {{(userToDisplay | async)?.perks.endurance}}</li>
-    <li> Perception: {{(userToDisplay | async)?.perks.perception}}</li>
+    <li> Strength: {{(currentUser | async)?.perks.strength}}</li>
+    <li> Intelligence: {{(currentUser | async)?.perks.intelligence}}</li>
+    <li> Agility: {{(currentUser | async)?.perks.agility}}</li>
+    <li> Luck: {{(currentUser | async)?.perks.luck}}</li>
+    <li> Endurance: {{(currentUser | async)?.perks.endurance}}</li>
+    <li> Perception: {{(currentUser | async)?.perks.perception}}</li>
   </ul>
-  <li> Place in Game: {{(userToDisplay | async)?.place}}</li>
-  <li> List of Inventory: {{(userToDisplay | async)?.inventory}}</li>
-</ul> -->
+  <li> Place in Game: {{(currentUser | async)?.place}}</li>
+  <li> List of Inventory: {{(currentUser | async)?.inventory}}</li>
+</ul>

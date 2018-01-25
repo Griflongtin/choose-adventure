@@ -13,30 +13,30 @@ import { IslandFourComponent } from './island-four/island-four.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
-     path: 'map',
+     path: 'map/:id',
      component: MapComponent
    },
   {
-    path: 'place',
+    path: 'place/:id',
     component: PlaceComponent
   },
   {
-    path: 'island-one',
+    path: 'island-one/:id',
     component: IslandOneComponent
   },
   {
-    path: 'island-two',
+    path: 'island-two/:id',
     component: IslandTwoComponent
   },
   {
-    path: 'island-three',
+    path: 'island-three/:id',
     component: IslandThreeComponent
   },
   {
-    path: 'island-four',
+    path: 'island-four/:id',
     component: IslandFourComponent
   }
 ];

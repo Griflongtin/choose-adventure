@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Params, ActivatedRoute } from '@angular/router';
 import { User } from '../user.model';
+import { Location } from '@angular/common';
+import { FirebaseListObservable } from 'angularfire2/database';
 import { UserService } from '../user.service';
 
 @Component({
@@ -11,14 +13,16 @@ import { UserService } from '../user.service';
 })
 export class MapComponent implements OnInit {
   currentUser;
+  userId;
 
-
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private location: Location, private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // setInterval(
-    // this.currentUser =  this.userService.findUser()
-    //   , 1000);
+      this.route.params.forEach((urlParameters) => {
+      console.log(urlParameters);
+      this.userId = urlParameters['id'];
+  });
+    this.currentUser = this.userService.getUserById(this.userId);
   }
 
 }
