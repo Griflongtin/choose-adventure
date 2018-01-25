@@ -26,21 +26,18 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.Users = this.userService.getUsers();
 
-    this.router.params.forEach((urlParameters) => {
-      this.userId = parseInt(urlParameters['id']);
-    });
+    // this.router.Params.forEach((urlParameters) => {
+    //   this.userId = parseInt(urlParameters['id']);
+    // });
     this.userToDisplay = this.userService.getUserById(this.userId);
 
-
-
-
-
-    // this.userId = urlParameters['id'];
-    // this.userToDisplay = this.UserServicel.getUserById(this.userId);
   }
 
   goToCharacterProgress(clickedUser) {
-    this.router.navigate(['map', clickedUser.$key]);
+
+    alert('hell');
+    // this.router.navigate(['map', clickedUser.$key]);
+    this.userToDisplay = this.userService.getUserById(clickedUser.$key);
   };
 
 

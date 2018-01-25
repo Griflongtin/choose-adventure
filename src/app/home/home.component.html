@@ -61,8 +61,37 @@
 <button type="button" (click)="UsersIt()" name="button">LogMe</button>
 <div class="existing-users" *ngFor="let user of Users | async">
   <li (click)='goToCharacterProgress(user)'>{{user.name}}</li>
+  <li>{{user.$key}}</li>
+  <ul>
+    <li>PERKS</li>
+    <li> Strength: {{user.perks.strength}}</li>
+    <li> Intelligence: {{user.perks.intelligence}}</li>
+    <li> Agility: {{user.perks.agility}}</li>
+    <li> Luck: {{user.perks.luck}}</li>
+    <li> Endurance: {{user.perks.endurance}}</li>
+    <li> Perception: {{user.perks.perception}}</li>
+  </ul>
+  <li> Place in Game: {{user.place}}</li>
+  <li> List of Inventory: {{user.inventory}}</li>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>
-
-<div>
-  <h3>{{(userToDisplay | async)?.name}}</h3>
-</div>
+  <ul>
+    <li>{{(userToDisplay | async)?.name}}</li>
+    <li>{{(userToDisplay | async)?.$key}}</li>
+    <ul>
+      <li>PERKS</li>
+      <li> Strength: {{(userToDisplay | async)?.perks.strength}}</li>
+      <li> Intelligence: {{(userToDisplay | async)?.perks.intelligence}}</li>
+      <li> Agility: {{(userToDisplay | async)?.perks.agility}}</li>
+      <li> Luck: {{(userToDisplay | async)?.perks.luck}}</li>
+      <li> Endurance: {{(userToDisplay | async)?.perks.endurance}}</li>
+      <li> Perception: {{(userToDisplay | async)?.perks.perception}}</li>
+    </ul>
+    <li> Place in Game: {{(userToDisplay | async)?.place}}</li>
+    <li> List of Inventory: {{(userToDisplay | async)?.inventory}}</li>
+  </ul>
