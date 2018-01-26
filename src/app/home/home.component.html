@@ -55,10 +55,10 @@
         </div>
       </div>
     </div>
-    <button type="submit" name="button" (click)="createUserName(playerName.value); playerName.value='';" routerLink="/map">Start Game</button>
+    <button type="submit" name="button" (click)="createUserName(playerName.value); playerName.value='';">Make New User</button>
   </form>
 </div>
-<button type="button" (click)="UsersIt()" name="button">LogMe</button>
+<p>Find your newly created user name or previously saved player below. Click name to start game.</p>
 <div class="existing-users" *ngFor="let user of Users | async">
   <li (click)='goToCharacterProgress(user)'>{{user.name}}</li>
   <li>{{user.$key}}</li>

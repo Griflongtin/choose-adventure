@@ -1,25 +1,12 @@
 <div class="map-container">
   <h2>CHOOSE YOUR NEXT LOCATION</h2>
-  <button id="place-button-one" type="click" name="button"><a routerLink="/island-one">General Store</a></button>
-  <button id="place-button-two" type="click" name="button"><a routerLink="/island-two">Wasteland</a></button>
-  <button id="place-button-three" type="click" name="button"><a routerLink="/island-three">Here</a></button>
-  <button id="place-button-four" type="click" name="button"><a routerLink="/island-four">There</a></button>
+  <button id="place-button-one" type="click" name="button" (click)="goToIslandOne()">General Store</button>
+  <button id="place-button-two" type="click" name="button" (click)="goToIslandTwo()">Wasteland</button>
+  <button id="place-button-three" type="click" name="button"(click)="goToIslandThree()">Here</button>
+  <button id="place-button-four" type="click" name="button"(click)="goToIslandFour()">There</button>
 </div>
 
 
+<div id="output">
 
-<ul>
-  <li>{{(currentUser | async)?.name}}</li>
-  <li>{{(currentUser | async)?.$key}}</li>
-  <ul>
-    <li>PERKS</li>
-    <li> Strength: {{(currentUser | async)?.perks.strength}}</li>
-    <li> Intelligence: {{(currentUser | async)?.perks.intelligence}}</li>
-    <li> Agility: {{(currentUser | async)?.perks.agility}}</li>
-    <li> Luck: {{(currentUser | async)?.perks.luck}}</li>
-    <li> Endurance: {{(currentUser | async)?.perks.endurance}}</li>
-    <li> Perception: {{(currentUser | async)?.perks.perception}}</li>
-  </ul>
-  <li> Place in Game: {{(currentUser | async)?.place}}</li>
-  <li> List of Inventory: {{(currentUser | async)?.inventory}}</li>
-</ul>
+</div>

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+#output {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mushroom, .bag, .crowbar, .grenade {
+  width: 75px;
+  height: 75px;
+}
+.mushroom {
+  background-image: url('/assets/item-icon/ammo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bag {
+  background-image: url('/assets/item-icon/bag.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.crowbar {
+  background-image: url('/assets/item-icon/crowbar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grenade {
+  background-image: url('/assets/item-icon/grenade.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

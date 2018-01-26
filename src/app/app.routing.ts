@@ -14,18 +14,19 @@ const appRoutes: Routes = [
   {
     path: '',
     component: HomeComponent,
+
   },
   {
      path: 'map/:id',
      component: MapComponent
    },
   {
-    path: 'place/:id',
-    component: PlaceComponent
-  },
-  {
     path: 'island-one/:id',
     component: IslandOneComponent
+  },
+  {
+    path: 'place/:id',
+    component: PlaceComponent
   },
   {
     path: 'island-two/:id',
